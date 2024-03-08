@@ -1,0 +1,76 @@
+<!-- Add this to your HTML file -->
+<div class="container mt-5">
+  <form
+    class="row g-3 needs-validation col-md-6 mx-auto"
+    [formGroup]="myForm"
+    (submit)="onSubmit($event)"
+  >
+    <div class="col-12 mb-3">
+      <label for="validationCustom01" class="form-label">Name</label>
+      <input
+        formControlName="name"
+        type="text"
+        class="form-control"
+        id="validationCustom01"
+        required
+        [ngClass]="{
+          'is-valid': nameControl?.valid,
+          'is-invalid': nameControl?.errors && nameControl?.touched
+        }"
+      />
+      <div class="valid-feedback">Looks good!</div>
+      <div class="invalid-feedback">Name is required</div>
+    </div>
+    <div class="col-12 mb-3">
+      <label for="validationCustom00" class="form-label">Age</label>
+      <input
+        formControlName="age"
+        type="text"
+        class="form-control"
+        id="validationCustom00"
+        required
+        [ngClass]="{
+          'is-valid': ageControl?.valid,
+          'is-invalid': ageControl?.errors && ageControl?.touched
+        }"
+      />
+      <div class="valid-feedback">Looks good!</div>
+      <div class="invalid-feedback">Age is required</div>
+    </div>
+    <div class="col-12 mb-3">
+      <label for="validationCustom02" class="form-label">Address</label>
+      <input
+        formControlName="address"
+        type="text"
+        class="form-control"
+        id="validationCustom02"
+        required
+        [ngClass]="{
+          'is-valid': addressControl?.valid,
+          'is-invalid': addressControl?.errors && addressControl?.touched
+        }"
+      />
+      <div class="valid-feedback">Looks good!</div>
+      <div class="invalid-feedback">Address is required</div>
+    </div>
+    <div class="col-12 mb-3">
+      <label for="validationCustom03" class="form-label">Salary</label>
+      <input
+        formControlName="salary"
+        type="text"
+        class="form-control"
+        id="validationCustom03"
+        required
+        [ngClass]="{
+          'is-valid': salaryControl?.valid,
+          'is-invalid': salaryControl?.errors && salaryControl?.touched
+        }"
+      />
+      <div class="valid-feedback">Looks good!</div>
+      <div class="invalid-feedback">Salary is required</div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</div>

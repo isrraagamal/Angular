@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <table class="table custom-table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Address</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of ProductList">
+        <th scope="row">{{ employee.id }}</th> 
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.age }}</td>
+        <td>{{ employee.address }}</td>
+
+        <td>
+          <a [routerLink]="['/products/details', employee.id]" class="action-link"><i class="bi bi-info-circle"></i> Details</a>
+          <a [routerLink]="['/products/edit', employee.id]" class="action-link"><i class="bi bi-pencil-square"></i> Edit</a>
+          <a (click)="delete(employee.id)" class="action-link"><i class="bi bi-archive"></i> Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

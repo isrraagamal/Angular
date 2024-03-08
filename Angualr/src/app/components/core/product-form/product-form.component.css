@@ -1,0 +1,21 @@
+/* Custom styles */
+.custom-input {
+  border: 1px solid #e83e8c; /* Pink border color */
+  border-radius: 0.25rem; /* Optional: Adjust border radius */
+}
+
+/* Pink button */
+.btn-pink {
+  background-color: #e83e8c; /* Pink background color */
+  border-color: #e83e8c; /* Pink border color */
+  color: #fff; /* White text color */
+}
+
+/* Optional: Adjust styles for feedback messages */
+.invalid-feedback {
+  color: #e83e8c; /* Pink color for error messages */
+}
+
+.valid-feedback {
+  color: #28a745; /* Green color for success messages */
+}
